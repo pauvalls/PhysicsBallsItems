@@ -57,6 +57,7 @@ public class Ball extends Item implements Runnable, Serializable {
         setType(type);
         color();
     }
+
     
     public Ball(float posX, float posY, float mass, Color color) {
         super(posX, posY, mass, color);
@@ -65,7 +66,14 @@ public class Ball extends Item implements Runnable, Serializable {
     public Ball() {
 
     }
-
+public Ball(float x, float y, float speedx, float speedy, float radius, float mass, String type){
+        super(x,y,mass,Color.BLUE);
+        this.speedx= speedx;
+        this.speedy= speedy;
+        this.radius= radius;
+        setType(type);
+        color();
+    }
     public void color() {
         switch (type) {
             case NORMAL:

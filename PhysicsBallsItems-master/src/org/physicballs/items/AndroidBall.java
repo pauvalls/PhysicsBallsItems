@@ -8,20 +8,23 @@ package org.physicballs.items;
 import java.io.Serializable;
 
 /**
- *
+ * Clase propocionada por Pau Valls para poder enviar una pelota de Android a Servidor
+ * 
  * @author pauva
  */
 public class AndroidBall implements Serializable{
-   
-   
-float x ;
-float y;
-float speed;
-float accel;
-float radius;
-float mass;
-float angle;
-String type;
+   float x, y , speedx,speedy,radius,mass;
+   String type;
+
+    public AndroidBall(float x, float y, float speedx, float speedy, float radius, float mass, String type) {
+        this.x = x;
+        this.y = y;
+        this.speedx = speedx;
+        this.speedy = speedy;
+        this.radius = radius;
+        this.mass = mass;
+        this.type = type;
+    }
 
     public float getX() {
         return x;
@@ -39,20 +42,20 @@ String type;
         this.y = y;
     }
 
-    public float getSpeed() {
-        return speed;
+    public float getSpeedx() {
+        return speedx;
     }
 
-    public void setSpeed(float speed) {
-        this.speed = speed;
+    public void setSpeedx(float speedx) {
+        this.speedx = speedx;
     }
 
-    public float getAccel() {
-        return accel;
+    public float getSpeedy() {
+        return speedy;
     }
 
-    public void setAccel(float accel) {
-        this.accel = accel;
+    public void setSpeedy(float speedy) {
+        this.speedy = speedy;
     }
 
     public float getRadius() {
@@ -71,14 +74,6 @@ String type;
         this.mass = mass;
     }
 
-    public float getAngle() {
-        return angle;
-    }
-
-    public void setAngle(float angle) {
-        this.angle = angle;
-    }
-
     public String getType() {
         return type;
     }
@@ -86,27 +81,5 @@ String type;
     public void setType(String type) {
         this.type = type;
     }
-
-
-    /**
-     * Main constructor
-     *
-     * @param x
-     * @param y
-     * @param speed
-     * @param radius
-     */
-    public AndroidBall(float x, float y, float speed, float accel, float radius, float mass, float angle, String type) {
-        this.x=x;
-        this.y=y;
-        this.speed=speed;
-        this.accel=accel;
-        this.radius=radius;
-        this.mass=mass;
-        this.angle=angle;
-        this.type= type;
-        
-    }
     
 }
-
